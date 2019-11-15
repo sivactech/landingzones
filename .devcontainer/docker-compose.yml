@@ -8,7 +8,10 @@ services:
   rover:
     user: vscode
     image: aztfmod/rover:1911.1717
- 
+  
+    labels:
+      - "caf=Azure CAF"
+      
     volumes:
       # This is where VS Code should expect to find your project's source code
       # and the value of "workspaceFolder" in .devcontainer/devcontainer.json
@@ -28,7 +31,17 @@ services:
  
 volumes:
   volume-caf-ssh:
+    labels:
+      - "caf=Azure CAF"
   volume-caf-cache:
+    labels:
+      - "caf=Azure CAF"
   volume-caf-cache1:
+    labels:
+      - "caf=Azure CAF"
   volume-caf-vscode-server:
+    labels:
+      - "caf=Azure CAF"
   volume-caf-vscode-server-insiders:
+    labels:
+      - "caf=Azure CAF"
