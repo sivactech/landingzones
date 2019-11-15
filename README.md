@@ -10,10 +10,10 @@ https://github.com/aztfmod/rover
 
 ## Clean-up
 
-MacOS or Linux
-```bash
-docker rm $(docker ps -a -f status=exited -q)
-docker volume rm -f $(docker volume ls | grep devcontainer | awk '{print $2}')
+Windows Powershell, macOS or Linux 
+```
+docker rm -v $(docker ps -a -f status=exited -q --filter "label=caf")
+docker volume prune --filter "label=caf"
 ```
 
 # Contribute
