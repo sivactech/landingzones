@@ -7,13 +7,13 @@ version: '3.7'
 services:
   rover:
     user: vscode
-    image: aztfmod/rover:1911.1714
+    image: aztfmod/rover:1911.1717
  
     volumes:
       # This is where VS Code should expect to find your project's source code
       # and the value of "workspaceFolder" in .devcontainer/devcontainer.json
       - ..:/tf/private
-      - volume-caf-ssh:/home/vscode/.shh
+      - volume-caf-ssh:/home/vscode/.ssh
       - volume-caf-cache:/home/vscode/.azure
       - volume-caf-cache1:/home/vscode/.terraform.d
       - volume-caf-vscode-server:/home/vscode/.vscode-server
