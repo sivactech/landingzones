@@ -8,6 +8,13 @@ To deploy a landingzone, install the rover on your machine as described in the R
 
 https://github.com/aztfmod/rover
 
+## Clean-up
+
+MacOS or Linux
+```bash
+docker rm $(docker ps -a -f status=exited -q)
+docker volume rm -f $(docker volume ls | grep devcontainer | awk '{print $2}')
+```
 
 # Contribute
 Pull requests are welcome to evolve the framework and integrate new features.
