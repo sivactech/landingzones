@@ -50,7 +50,7 @@ variable "analytics_workspace_name" {
 
 variable "tags_hub" {
   description = "(Required) Map of the tags to be applied"
-  type    = map(string)
+  type        = map(string)
 }
 
 variable "azure_activity_logs_retention" {
@@ -67,10 +67,10 @@ variable "azure_diagnostics_logs_retention" {
 
 variable "provision_rbac" {
   description = "(Optional) defines if the AAD roles and role assignments will be completed. This requires AAD privileged-acount"
-  default = false
+  default     = false
 }
 
 variable "enable_security_center" {
   description = "Enable security cetner"
-  type = bool
+  type        = bool
 }
